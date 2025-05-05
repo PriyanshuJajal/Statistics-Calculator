@@ -1,0 +1,156 @@
+/* Modern Statistics Calculator Styling */
+body {
+  margin: 0;
+  background-color: #1a1a2e;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-image: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  min-height: 100vh;
+}
+
+h1 {
+  color: #00fff5;
+  text-shadow: 0 0 10px rgba(0, 255, 245, 0.5);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.para {
+  text-align: center;
+  font-size: 22px;
+}
+
+form {
+  background-color: rgba(26, 26, 46, 0.7);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto;
+  border: 1px solid #4d4d8f;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #00fff5;
+}
+
+input {
+  background-color: rgba(10, 10, 35, 0.7);
+  color: white;
+  border: 2px solid #2c2c54;
+  padding: 12px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #00fff5;
+  box-shadow: 0 0 8px rgba(0, 255, 245, 0.6);
+}
+
+button {
+  cursor: pointer;
+  background-color: #4d4d8f;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background-color: #00fff5;
+  color: #1a1a2e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 255, 245, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.results {
+  background-color: rgba(26, 26, 46, 0.7);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: left;
+  border: 1px solid #4d4d8f;
+}
+
+dfn {
+  color: #00fff5;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: bold;
+  background-color: rgba(37, 37, 68, 0.7);
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 10px 0;
+  border-left: 4px solid #00fff5;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bold span {
+  color: #00fff5;
+  font-size: 1.1rem;
+  min-width: 80px;
+  text-align: right;
+}
+
+/* Animation for results when they appear */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#mean, #median, #mode, #range, #variance, #standardDeviation {
+  animation: fadeIn 0.5s ease-out;
+  display: inline-block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  body {
+    padding: 10px;
+  }
+  
+  form, .results {
+    width: 100%;
+    padding: 15px;
+    max-width: 100%;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
